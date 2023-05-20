@@ -1,0 +1,23 @@
+discover
+plan
+build
+test
+Continuous deployment
+Operations
+Continuous monitoring.
+ Development and operations teams should continually monitor their production applications.
+
+
+continuous development,
+continuous integration, 
+continuous testing, 
+continuous deployment, 
+and continuous monitoring
+
+
+Adopt an agile development methodology;
+Utilize cloud computing;
+Get your procedures in line with a CI and CD workflow;
+Automate software deployment process flow;
+Organize automated software testing;
+Use a continuous deployment DevOps strategy.

@@ -13,5 +13,5 @@ COPY server.py /app
 # RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the Python script when the container starts
-CMD ["python", "your_script.py"]
+CMD ["python", "server.py"]
 

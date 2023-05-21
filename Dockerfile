@@ -14,3 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Run the Python script when the container starts
 CMD ["python", "server.py"]
 
+EXPOSE 8080

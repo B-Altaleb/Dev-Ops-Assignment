@@ -16,7 +16,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh 'docker run myflaskapp python -m unittest'
+                sh 'docker run integrating_jenkins3 python -m unittest'
             }
         }
         
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                    sh 'docker tag myflaskapp bayanaltaleb/integrating_jenkins3:latest'
+                    sh 'docker tag integrating_jenkins3 bayanaltaleb/integrating_jenkins3:latest'
                     sh 'docker push bayanaltaleb/integrating_jenkins3:latest'
                 }
             }

@@ -10,7 +10,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'docker build -t myflaskapp .'
+                sh 'docker build -t integrating_jenkins3 .'
             }
         }
         

@@ -10,7 +10,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'docker build -t bayanaltaleb/integrating_jenkins3 .'
+                sh 'docker build -t bayanaltaleb/integrating_jenkins4 .'
             }
         }
         
@@ -23,9 +23,9 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withCredentials([string(credentialsId: 'DockerhubPasswprd', variable: 'Dockerhubpassword')]) {
-                    sh 'docker login -u bayanaltaleb -p ${Dockerhubpassword}' 
-                    sh 'docker tag integrating_jenkins3 bayanaltaleb/integrating_jenkins3:latest'
-                    sh 'docker push bayanaltaleb/integrating_jenkins3:latest'
+                    sh 'docker login -u bayanaltaleb -p Salamozo@83' 
+                  //  sh 'docker tag integrating_jenkins4 bayanaltaleb/integrating_jenkins4:latest'
+                    sh 'docker push bayanaltaleb/integrating_jenkins4:latest'
                 }
             }
         }

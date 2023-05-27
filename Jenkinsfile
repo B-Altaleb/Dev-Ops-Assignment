@@ -11,7 +11,6 @@ pipeline {
         stage('Build') {
             steps {
                 // Checkout source code from version control
-                git 'https://github.com/B-Altaleb/DevOpsAssignment.git'                
                 sh 'docker build -t integrating_jenkins77 .'
             }
         }

@@ -10,13 +10,13 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'docker build -t bayanaltaleb/integrating_jenkins5 .'
+                sh 'docker build bayanaltaleb/integrating_jenkins55 .'
             }
         }
         
         stage('Test') {
             steps {
-                sh 'docker run bayanaltaleb/integrating_jenkins5 python -m unittest'
+                sh 'docker run bayanaltaleb/integrating_jenkins55 python -m unittest'
             }
         }
         

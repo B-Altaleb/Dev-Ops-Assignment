@@ -10,9 +10,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                dir('C:/Users/Hani\ Taleb/OneDrive\ -\ RTC\ Education\ Ltd/My\ RCL\ drive/SWE7103\ -\ Dev\ Ops/DevOpsAssessmentAnswer/DevOpsProject/Local\ Github\ repository/Test/DevOpsAssignment') {
                     sh 'docker build -t integrating_jenkins77 .'
-                }
             }
         }
         

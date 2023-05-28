@@ -18,7 +18,7 @@ EXPOSE 5000
 
 # Set the environment variables for Flask
 ENV FLASK_APP=server.py
-ENV FLASK_RUN_HOST=0.0.0.0
+//ENV FLASK_RUN_HOST=0.0.0.0
 
 # Start the Flask server
 CMD ["flask", "run"]

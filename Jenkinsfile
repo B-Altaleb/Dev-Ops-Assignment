@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                //checkout scm
+                git 'https://github.com/B-Altaleb/DevOpsAssignment.git'
             }
         }
         
@@ -12,10 +13,11 @@ pipeline {
             steps {
                 echo 'BUILDING STEP'
                 //sh 'docker build -t integrating_jenkins77 .'
+                dockerImage.push('your-docker-registry/your-image-name')
             }
         }
         
-       /stage('Test') {
+       stage('Test') {
             steps {
                 echo 'TESTING STEP'
                 //sh 'docker run integrating_jenkins77 python -m unittest'
@@ -29,8 +31,21 @@ pipeline {
                 //    sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
                 //    sh 'docker tag integrating_jenkins5 $DOCKER_USERNAME/integrating_jenkins77'
                 //    sh 'docker push $DOCKER_USERNAME/integrating_jenkins77'
+                
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    kubernetesDeploy(
+                        kubeconfigId: 'your-kubeconfig-credentials',
+                        configs: 'your-kubernetes-deployment.yml',
+                        enableConfigSubstitution: true
+                    )
                 }
             }
         }
     }
 }
+

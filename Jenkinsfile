@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 //checkout scm
-                git 'https://github.com/B-Altaleb/DevOpsAssignment.git'
+                git branch: 'main', url: 'https://github.com/B-Altaleb/DevOpsAssignment.git'
             }
         }
         

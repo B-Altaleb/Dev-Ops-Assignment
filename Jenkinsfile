@@ -39,8 +39,8 @@ pipeline {
             steps {
                 script {
                     kubernetesDeploy(
-                        kubeconfigId: 'your-kubeconfig-credentials',
-                        configs: 'your-kubernetes-deployment.yml',
+                        kubeconfigId: 'my-kubeconfig-credentials',
+                        configs: 'jenkins-k8-deployment.yml',
                         enableConfigSubstitution: true
                     )
                 }

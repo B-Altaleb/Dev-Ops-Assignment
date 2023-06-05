@@ -37,13 +37,14 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                script {
-                    kubernetesDeploy(
-                        kubeconfigId: 'my-kubeconfig-credentials',
-                        configs: 'jenkins-k8-deployment.yml',
-                        enableConfigSubstitution: true
-                    )
-                }
+                echo 'DEPLOYMENT STEP'
+                //script {
+                //    kubernetesDeploy(
+                //        kubeconfigId: 'my-kubeconfig-credentials',
+                //        configs: 'jenkins-k8-deployment.yml',
+                //        enableConfigSubstitution: true
+                //    )
+                //}
             }
         }
     }
